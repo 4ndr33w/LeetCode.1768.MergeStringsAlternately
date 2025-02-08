@@ -2,7 +2,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class SolutionTest{
 
@@ -15,6 +15,9 @@ class SolutionTest{
         Solution solution = new Solution();
 
         String actualResult = solution.mergeAlternately(word1, word2);
-        assertEquals(expectedString, actualResult);
+
+        boolean result = actualResult.equals(expectedString);
+
+        assertTrue(result);
     }
 }
