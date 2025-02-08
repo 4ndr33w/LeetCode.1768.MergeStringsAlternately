@@ -1,7 +1,7 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args){
         String word1 = "abc";
         String word2 = "pqr";
         String expectedString = "apbqcr";
@@ -9,6 +9,6 @@ public class Main {
 
         String actualResult = solution.mergeAlternately(word1, word2);
 
-        System.out.println(actualResult.equals(expectedString));
+        System.out.println(actualResult);
     }
 }

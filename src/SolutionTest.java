@@ -1,18 +1,16 @@
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.CsvFileSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class SolutionTest {
+class SolutionTest{
+
+    private static final String FILE_PATH = "./Resources/testData.csv";
 
     @ParameterizedTest
-    @CsvSource({
-            "abc, pqr, apbqcr",
-            "ab, pqrs, apbqrs",
-            "abcd, pq, apbqcd"
-    })
-    @DisplayName("mergeAlternately")
+    @CsvFileSource(resources = FILE_PATH)
+    @DisplayName("merge Alternately tests")
      public void mergeAlternatelyTest(String word1, String word2, String expectedString) {
         Solution solution = new Solution();
 
