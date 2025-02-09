@@ -1,3 +1,4 @@
+import Resources.StaticResources;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
@@ -9,7 +10,7 @@ class SolutionTest{
     private static final String FILE_PATH = "./Resources/testData.csv";
 
     @ParameterizedTest
-    @CsvFileSource(resources = FILE_PATH)
+    @CsvFileSource(resources = FILE_PATH, numLinesToSkip = 1)
     @DisplayName("merge Alternately tests")
      public void mergeAlternatelyTest(String word1, String word2, String expectedString) {
         Solution solution = new Solution();
